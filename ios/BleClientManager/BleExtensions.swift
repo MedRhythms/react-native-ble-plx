@@ -33,7 +33,7 @@ extension ScannedPeripheral {
         }
 
         // Capture current time in milliseconds since 1970
-        let UTCDateTime = Date().timeIntervalSince1970 * 1000
+        let UTCDateTime = Int64(Date().timeIntervalSince1970) * Int64(1000)
 
         let manufacturerData = advertisementData
             .manufacturerData?
