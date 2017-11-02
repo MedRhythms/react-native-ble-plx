@@ -39,6 +39,11 @@ export class Device implements NativeDevice {
    */
   mtu: number
 
+  /**
+   * Datetime packet was received in milliseconds since 1970.
+   */
+  UTCDateTime: number
+
   // Advertisement
 
   /**
