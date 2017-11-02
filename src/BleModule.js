@@ -5,12 +5,12 @@ import { NativeModules, NativeEventEmitter } from 'react-native'
 import { State, LogLevel } from './TypeDefinition'
 import type {
   DeviceId,
-  Identifier,
-  UUID,
-  TransactionId,
-  Base64,
-  ScanOptions,
-  ConnectionOptions
+    Identifier,
+    UUID,
+    TransactionId,
+    Base64,
+    ScanOptions,
+    ConnectionOptions
 } from './TypeDefinition'
 
 /**
@@ -39,6 +39,11 @@ export interface NativeDevice {
    * @private
    */
   mtu: number;
+
+  /**
+   * Datetime packet was received in milliseconds since 1970.
+   */
+  UTCDateTime: number
 
   // Advertisement
 
