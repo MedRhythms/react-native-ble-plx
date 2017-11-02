@@ -32,6 +32,9 @@ extension ScannedPeripheral {
             serviceData = data
         }
 
+        // Capture current time in milliseconds since 1970
+        let UTCDateTime = Date().timeIntervalSince1970.milliseconds
+
         let manufacturerData = advertisementData
             .manufacturerData?
             .base64
@@ -61,7 +64,9 @@ extension ScannedPeripheral {
             "txPowerLevel": advertisementData.txPowerLevel as Any,
             "solicitedServiceUUIDs": solicitedServiceUUIDs as Any,
             "isConnectable": advertisementData.isConnectable as Any,
-            "overflowServiceUUIDs": overflowServiceUUIDs as Any
+            "overflowServiceUUIDs": overflowServiceUUIDs as Any,
+
+            "UTCDateTime": UTCDateTime
         ]
     }
 }

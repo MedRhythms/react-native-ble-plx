@@ -28,6 +28,9 @@ public class RxBleScanResultConverter extends JSObjectConverter<RxBleScanResult>
         String SOLICITED_SERVICE_UUIDS = "solicitedServiceUUIDs";
         String IS_CONNECTABLE = "isConnectable";
         String OVERFLOW_SERVICE_UUIDS = "overflowServiceUUIDs";
+
+        // Timestamp of conversion
+        String UTC_DATE_TIME = "UTCDateTime"
     }
 
     @Override
@@ -37,6 +40,9 @@ public class RxBleScanResultConverter extends JSObjectConverter<RxBleScanResult>
         result.putString(Metadata.NAME, value.getBleDevice().getName());
         result.putInt(Metadata.RSSI, value.getRssi());
         result.putInt(Metadata.MTU, 23);
+
+        // Capture current time in milliseconds since 1970
+        result.putInt(Metadata.UTC_DATE_TIME, System.currentTimeMillis());
 
         AdvertisementData advData = AdvertisementData.parseScanResponseData(value.getScanRecord());
         result.putString(Metadata.MANUFACTURER_DATA,
