@@ -43,7 +43,7 @@ export interface NativeDevice {
   /**
    * Datetime packet was received in milliseconds since 1970.
    */
-  UTCDateTime: number
+  UTCDateTime: number;
 
   // Advertisement
 
