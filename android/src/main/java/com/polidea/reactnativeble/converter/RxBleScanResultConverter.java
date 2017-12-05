@@ -42,7 +42,7 @@ public class RxBleScanResultConverter extends JSObjectConverter<RxBleScanResult>
         result.putInt(Metadata.MTU, 23);
 
         // Capture current time in milliseconds since 1970
-        result.putInt(Metadata.UTC_DATE_TIME, System.currentTimeMillis());
+        result.putDouble(Metadata.UTC_DATE_TIME, System.currentTimeMillis());
 
         AdvertisementData advData = AdvertisementData.parseScanResponseData(value.getScanRecord());
         result.putString(Metadata.MANUFACTURER_DATA,
