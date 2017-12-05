@@ -30,7 +30,7 @@ public class RxBleScanResultConverter extends JSObjectConverter<RxBleScanResult>
         String OVERFLOW_SERVICE_UUIDS = "overflowServiceUUIDs";
 
         // Timestamp of conversion
-        String UTC_DATE_TIME = "UTCDateTime"
+        String UTC_DATE_TIME = "UTCDateTime";
     }
 
     @Override
